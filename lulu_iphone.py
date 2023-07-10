@@ -13,7 +13,6 @@ for product_desc in product_descs:
     name = product_desc.find("h3").text.strip()
     price = product_desc.find("p", class_="product-price has-icon").span.text.strip()
 
-    # Extracting model, color, and storage from the name
     model = name.split(", ")[0]
     storage = int(name.split(", ")[-2].replace(" GB Storage", ""))
     color = name.split(", ")[-1]
@@ -21,8 +20,7 @@ for product_desc in product_descs:
 
     rows.append([model, color, storage, price])
 
-# Writing the data to a CSV file
 with open("lulu_iphone.csv", "w", newline="") as csvfile:
     writer = csv.writer(csvfile)
-    writer.writerow(["Model", "Color", "Storage", "Price(QAR)"])  # Writing header
+    writer.writerow(["Model", "Color", "Storage", "Price(QAR)"])
     writer.writerows(rows)
