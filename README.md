@@ -9,5 +9,4 @@ The objective of this project is to scrape iPhone prices from an e-commerce webs
 * Web scraping using Python's requests and BeautifulSoup libraries
 * Data extraction and manipulation
 * CSV file handling for data storage
-* Data cleaning and transformation (converting storage to integer and price to float)
 * Basic data analysis and presentation
